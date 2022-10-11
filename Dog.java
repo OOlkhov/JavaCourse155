@@ -1,0 +1,42 @@
+public class Dog extends Animal {
+	
+	private boolean hasDoghouse;
+	private boolean hasMaster;
+	
+	public Dog(String name, String color, boolean hasMaster) {
+		super(name, color);
+		this.hasMaster = hasMaster;
+	}
+	
+	public void makeNoise(){
+		System.out.println("Woof! Woof!");
+	}
+	
+	public void chaseCat(){
+		System.out.println("If only I could climb a tree");
+	}
+	
+	public String guard() {
+		return "Object Thief";
+	}
+	
+	public boolean getHasDoghouse(){
+		return hasDoghouse;
+	}
+	
+	public void setDoghouse (boolean dh){
+		hasDoghouse = dh;
+	}
+	
+	public boolean getHasMaster (){
+		return hasMaster;
+	}
+	
+	public void setHasMaster(boolean hasM) {
+		hasMaster = hasM;
+	}
+	
+	public void eat(){
+		System.out.println("Woof I'm eating");
+	}
+}
