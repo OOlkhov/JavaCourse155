@@ -1,4 +1,4 @@
-public class Dog extends Animal {
+public class Dog extends Animal implements Pet{
 	
 	private boolean hasDoghouse;
 	private boolean hasMaster;
@@ -38,5 +38,13 @@ public class Dog extends Animal {
 	
 	public void eat(){
 		System.out.println("Woof I'm eating");
+	}
+	
+	public void beFriendly(){
+		System.out.println("I like people");
+	}
+	
+	public void play(){
+		System.out.println("Here is my favourite ball, let's play");
 	}
 }

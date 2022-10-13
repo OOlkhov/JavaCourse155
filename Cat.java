@@ -1,4 +1,4 @@
-public class Cat extends Wild {
+public class Cat extends Animal implements Pet {
 	
 	private boolean goesOutside;
 	
@@ -35,4 +35,13 @@ public class Cat extends Wild {
 	public void eat(){
 		System.out.println("Meay I'm eating");
 	}
+	
+	public void beFriendly(){
+		System.out.println("I like people");
+	}
+	
+	public void play(){
+		System.out.println("Here is my favourite toy, let's play");
+	}
+	
 }
