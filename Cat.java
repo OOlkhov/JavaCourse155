@@ -1,4 +1,4 @@
-public class Cat extends Animal implements Pet {
+public class Cat extends Animal implements Pet, Comparable <Cat> {
 	
 	private boolean goesOutside;
 	
@@ -43,5 +43,8 @@ public class Cat extends Animal implements Pet {
 	public void play(){
 		System.out.println("Here is my favourite toy, let's play");
 	}
+	
+	public Cat compareTo(Cat c){
+		
 	
 }
