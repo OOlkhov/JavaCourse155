@@ -19,17 +19,23 @@ public class TestCat{
 		Dog dog2 = new Dog ("Spot", "white", true, 5);
 		Dog dog3 = new Dog ("Fantik", "rgb", false, 3);
 		
+		System.out.println("=============================");
+		
 		Cat[] cats = {cat1, cat2, cat3};
 		Arrays.sort(cats);
 		for (Cat cat : cats) {   
 			System.out.println(cat);
 		}
+		System.out.println("=============================");
 		
 		Dog[] dogs = {dog1, dog2, dog3);
+		
 		for (Dog dog : dogs) {
 			System.out.println(dog);
 		}
-		Arrays.sort(dogs);
+		
+		DogAgeComparator dac = new DogAgeComparator();
+		dogs.sort(dac);
 		for (Dog dog : dogs) {
 			System.out.println(dog);
 		}

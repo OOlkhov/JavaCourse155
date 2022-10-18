@@ -1,4 +1,4 @@
-public class Dog extends Animal implements Pet, Serve, Comparator<Dog> {
+public class Dog extends Animal implements Pet, Serve {
 	
 	private boolean hasDoghouse;
 	private boolean hasMaster;
@@ -66,14 +66,6 @@ public class Dog extends Animal implements Pet, Serve, Comparator<Dog> {
 		System.out.println("There's some work me");
 	}
 	
-	public int compare (Dog d1, dog d2){
-		if (d1.getAge() == d2.getAge()){return 0;}
-		if (d1.getAge() == d2.getAge()){
-			return 1;
-		}
-		else {
-			return -1;
-		}
-	}
+	
 		
 }
