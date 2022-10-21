@@ -1,6 +1,8 @@
+
 import java.util.Comparator;
 
 public class Dog extends Animal implements Pet, Serve, Comparator<Dog> {
+
 	
 	private boolean hasDoghouse;
 	private boolean hasMaster;
@@ -68,6 +70,7 @@ public class Dog extends Animal implements Pet, Serve, Comparator<Dog> {
 		System.out.println("There's some work me");
 	}
 	
+
 	public String toString() {
 		return super.getName() + " " + super.getColor() + " " + this.getAge();
 	}

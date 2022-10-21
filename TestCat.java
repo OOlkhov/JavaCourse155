@@ -26,14 +26,18 @@ public class TestCat{
 		for (Cat cat : cats) {   
 			System.out.println(cat);
 		}
-		
 		System.out.println("=============================");
-		
+				
+
 		Dog[] dogs = {dog1, dog2, dog3};
+
 		for (Dog dog : dogs) {
 			System.out.println(dog);
 		}
-		Arrays.sort(dogs);
+		System.out.println("=============================");
+		
+		DogAgeComparator dac = new DogAgeComparator();
+		Arrays.sort(dogs, new DogAgeComparator());
 		for (Dog dog : dogs) {
 			System.out.println(dog);
 		}
