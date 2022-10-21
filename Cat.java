@@ -67,4 +67,23 @@ public class Cat extends Animal implements Pet, Comparable <Cat> {
 			return 1;
 		}
 	}
+	
+	private class Habitat {
+		static final String planet = "Earth";
+		String continent;
+		String country;
+		String area;
+		
+		public Habitat(String continent, String country, String area){
+			this.continent = continent;
+			this.country = country;
+			this.area = area;
+		}
+		
+		public void info (){
+			System.out.println(planet + " " + continent + " " + country + " " + area);
+		}
+		
+	}
+	
 }
