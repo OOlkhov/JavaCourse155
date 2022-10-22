@@ -68,11 +68,11 @@ public class Cat extends Animal implements Pet, Comparable <Cat> {
 		}
 	}
 	
-	private class Habitat {
-		static final String planet = "Earth";
-		String continent;
-		String country;
-		String area;
+	public class Habitat {
+		private static final String planet = "Earth";
+		private String continent;
+		private String country;
+		private String area;
 		
 		public Habitat(String continent, String country, String area){
 			this.continent = continent;
@@ -85,5 +85,22 @@ public class Cat extends Animal implements Pet, Comparable <Cat> {
 		}
 		
 	}
+	
+	public class Owner {
+		private String name;
+		private int age;
+		
+		public Owner (String name, int age){
+			this.name = name;
+			this.age = age;
+		}
+		
+		public void ownerInfo(){
+			System.out.println("Owner is " + name + ", he/she is " + age + " years old.");
+		}
+	}
+		
+	
+	
 	
 }
