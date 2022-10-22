@@ -7,6 +7,8 @@ public class TestInner {
 		
 		Cat.Owner cats1Owner = cat1.new Owner("Masha", 10);
 		cats1Owner.ownerInfo();
-		
+		System.out.println("Count of Cat objects = " 
+        + Cat.getCount());
+
 	}
 }

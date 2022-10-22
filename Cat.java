@@ -2,11 +2,13 @@ public class Cat extends Animal implements Pet, Comparable <Cat> {
 	
 	private boolean goesOutside;
 	private int weight;
+	private static int count = 0;
 	
 	public Cat(String name, String color, boolean goesOutside, int w) {
 		super(name, color);
 		this.goesOutside = goesOutside;
 		weight = w;
+		new Counter().setCount();
 	}
 	
 	public int getWeight (){
@@ -99,6 +101,17 @@ public class Cat extends Animal implements Pet, Comparable <Cat> {
 			System.out.println("Owner is " + name + ", he/she is " + age + " years old.");
 		}
 	}
+	
+	public static int getCount() {
+		return count;
+	}
+	
+	private static class Counter {
+		private void setCount (){
+			count = count + 1;
+		}
+	}
+	
 		
 	
 	
