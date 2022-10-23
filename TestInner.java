@@ -9,6 +9,10 @@ public class TestInner {
 		cats1Owner.ownerInfo();
 		System.out.println("Count of Cat objects = " 
         + Cat.getCount());
+		
+		System.out.println("Random name could be - " + cat1.getCatName());
 
+		System.out.println("Actual name is still " + cat1.getName());
+		
 	}
 }

@@ -1,3 +1,5 @@
+
+
 public class Cat extends Animal implements Pet, Comparable <Cat> {
 	
 	private boolean goesOutside;
@@ -112,7 +114,14 @@ public class Cat extends Animal implements Pet, Comparable <Cat> {
 		}
 	}
 	
-		
+	public enum CatName{
+	Martyn, Masik, Murzyk, Tiger, Ryzhyk, Snizhok}
+	
+	public CatName getCatName (){
+		int rand = (int)(Math.random()*6);
+		return CatName.values()[rand];
+	}
+	
 	
 	
 	
