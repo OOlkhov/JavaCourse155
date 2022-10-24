@@ -18,6 +18,15 @@ public class Animals{
 		System.out.println(animals);
 	}
 	
+	public void enterAnimal(){
+		Scanner sc = new Scanner(System.in);
+		String animal = sc.nextLine();
+		Animal a = new Animal(animal);
+		addAnimal(a);
+		System.out.println("Animal added");
+	}
+		
+	
 	public static void main (String[] args) {
 		Cat cat1 = new Cat ("Murzik", "red", true, 6);
 		Cat cat2 = new Cat ("Bandit", "black", true, 5);
@@ -36,35 +45,21 @@ public class Animals{
 		animals.addAnimal(dog3);
 		animals.printAnimals();
 		
-		System.out.println("Would you like to add animals? (yes/no)");
-		
-		Scanner sc = new Scanner(System.in);
-		String choice = sc.nextLine();
-		if (choice.equals("yes")){
-			System.out.println("Go ahead!");
-			while (sc.hasNextLine()){
-				
-				String animal = sc.nextLine();
-				if (!animal.equals("")){
-				Animal a = new Animal(animal);
-				animals.addAnimal(a);}
-				else break;
-				
+		boolean run = true;
+		while (run){
+			System.out.println("Make your choice: 1 - enter new animal; 2 - print list of animals; 3 - exit.");
+			Scanner sc = new Scanner(System.in);
+			int choice = sc.nextInt();
+			switch(choice){
+				case 1: System.out.println("Go ahead!");
+						animals.enterAnimal();
+						break;
+				case 2: animals.printAnimals();
+						break;
+				case 3: System.out.println("Thanks for playing.");
+						run = false;
 			}
 		}
-		
-		
-		System.out.println ("Show animals? (yes/no)");
-		if (sc.hasNextLine()){
-			choice = sc.nextLine();
-			if (choice.equals("yes")) animals.printAnimals();
-			else if (choice.equals("no")) System.out.println("Good bye");
-			else System.out.println("Please enter yes or no");
-		}
-		else System.out.println("Thanks for playing");
 			
-		
-		
-		
 	}
 }
