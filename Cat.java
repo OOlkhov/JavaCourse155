@@ -6,6 +6,7 @@ public class Cat extends Animal implements Pet, Comparable <Cat> {
 	private int weight;
 	private static int count = 0;
 	
+	
 	public Cat(String name, String color, boolean goesOutside, int w) {
 		super(name, color);
 		this.goesOutside = goesOutside;

@@ -36,7 +36,33 @@ public class Animals{
 		animals.addAnimal(dog3);
 		animals.printAnimals();
 		
+		System.out.println("Would you like to add animals? (yes/no)");
 		
+		Scanner sc = new Scanner(System.in);
+		String choice = sc.nextLine();
+		if (choice.equals("yes")){
+			System.out.println("Go ahead!");
+			while (sc.hasNextLine()){
+				
+				String animal = sc.nextLine();
+				if (!animal.equals("")){
+				Animal a = new Animal(animal);
+				animals.addAnimal(a);}
+				else break;
+				
+			}
+		}
+		
+		
+		System.out.println ("Show animals? (yes/no)");
+		if (sc.hasNextLine()){
+			choice = sc.nextLine();
+			if (choice.equals("yes")) animals.printAnimals();
+			else if (choice.equals("no")) System.out.println("Good bye");
+			else System.out.println("Please enter yes or no");
+		}
+		else System.out.println("Thanks for playing");
+			
 		
 		
 		
