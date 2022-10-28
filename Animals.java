@@ -65,6 +65,9 @@ public class Animals{
 			catch(InputMismatchException ime){
 				System.out.println("You were asked to enter an integer 1, 2 or 3.");
 			}
+			finally {
+				System.out.println("Here comes finally");
+			}
  			
 		}
 			
