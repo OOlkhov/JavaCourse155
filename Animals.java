@@ -46,11 +46,13 @@ public class Animals{
 		animals.printAnimals();
 		
 		boolean run = true;
+		
 		while (run){
 			System.out.println("Make your choice: 1 - enter new animal; 2 - print list of animals; 3 - exit.");
 			Scanner sc = new Scanner(System.in);
-			int choice = sc.nextInt();
-			switch(choice){
+			try{
+				int choice = sc.nextInt();
+				switch(choice){
 				case 1: System.out.println("Go ahead!");
 						animals.enterAnimal();
 						break;
@@ -59,6 +61,11 @@ public class Animals{
 				case 3: System.out.println("Thanks for playing.");
 						run = false;
 			}
+				}
+			catch(InputMismatchException ime){
+				System.out.println("You were asked to enter an integer 1, 2 or 3.");
+			}
+ 			
 		}
 			
 	}
