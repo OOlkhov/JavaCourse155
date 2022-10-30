@@ -5,7 +5,7 @@ public class Animals{
 	private int count = 0;
 	private ArrayList<Animal> animals = new ArrayList<Animal>();
 	
-	public void addAnimal (Animal animal){
+	public void addAnimal (Animal animal) {
 		if (count < 10){
 			animals.add(animal);
 			count++;}
@@ -18,12 +18,21 @@ public class Animals{
 		System.out.println(animals);
 	}
 	
-	public void enterAnimal(){
+	public void enterAnimal()  {
 		Scanner sc = new Scanner(System.in);
-		String animal = sc.nextLine();
-		Animal a = new Animal(animal);
-		addAnimal(a);
-		System.out.println("Animal added");
+		try {
+			String animal = sc.nextLine();
+			if (Character.isDigit(animal.charAt(0))){
+				throw new FirstCharDigitException();
+			}
+			else{
+				Animal a = new Animal(animal);
+				addAnimal(a);
+				System.out.println("Animal added");
+			}
+		}catch (FirstCharDigitException fcde){
+			System.err.println("Exception occurred:\n" + fcde);
+			}
 	}
 		
 	
@@ -58,7 +67,7 @@ public class Animals{
 						break;
 				case 2: animals.printAnimals();
 						break;
-				case 3: System.out.println("Thanks for playing.");
+				case 3: System.out.println("Thank you for playing.");
 						run = false;
 			}
 				}
